@@ -1,0 +1,15 @@
+# Cloudflare Worker Configuration for Proxying Streamlit
+
+name = "proxy"
+type = "javascript"
+
+account_id = "<your-account-id>"
+workers_dev = true
+compatibility_date = "2026-03-14"
+
+[[routings]]
+pattern = "*your-pattern*"
+script = "proxy"
+
+# Define the script that proxies to the Streamlit app
+service_worker = "serviceWorker.js"
